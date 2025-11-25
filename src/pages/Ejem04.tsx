@@ -1,12 +1,13 @@
+
 interface Props {
-    color: string;
-    size?: number;
+    color : String
+    size : number
 }
 
-function MiComponente({color}: Props) {
-    return <div>Soy un componente de color {color}</div>
+function MiComponente({color, size}:Props) {
+    return <div>Soy un componente de color {color} de tamaño {size}</div>
 }
 
-export default function Ejem04() {
-    return <MiComponente color="red"/>
+export default function Ejem_04() {
+    return <MiComponente color = "red" size={4}/>
 }

@@ -1,34 +1,27 @@
-//Crea un componente boton, que al pulsarlo muestre como texto del boton
-//"Me has pulsado" y se ponga de color "rojo"
-//Al dejar de pulsarlo, vuelve a la normalidad
 import { useState } from "react";
 
-function MiBoton({ style }: { style: React.CSSProperties }) {
+function MiBoton() {
   const [pulsado, setPulsado] = useState(false);
 
-  // Se usa onMouseDown y onMouseUp, y también onMouseLeave para casos donde el cursor sale del botón
-  const handleMouseDown = () => setPulsado(true);
-  const handleMouseUp = () => setPulsado(false);
-  const handleMouseLeave = () => setPulsado(false);
+  function handlePulsado() {
+    setPulsado(true);
+  }
 
-  // Solo aplica el estilo rojo si está pulsado
-  const estiloBoton = pulsado ? style : {};
-
+  function handleDesPulsado() {
+    setPulsado(false);
+  }
   return (
     <button
-      style={estiloBoton}
-      onMouseDown={handleMouseDown}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseLeave}
+      style={{ backgroundColor: pulsado ? "red" : "black" }}
+      onMouseDown={handlePulsado}
+      onMouseUp={handleDesPulsado}
+      onMouseLeave={handleDesPulsado}
     >
-      {pulsado ? "Me has pulsado" : "Púlsame"}
+      {pulsado ? "Me has pulsado" : "Pulsame"}
     </button>
   );
 }
 
 export default function Ejem09() {
-  const miEstilos = {
-    backgroundColor: "red"
-  };
-  return <MiBoton style={miEstilos} />;
+  return <MiBoton />;
 }

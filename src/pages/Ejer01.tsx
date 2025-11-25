@@ -1,16 +1,20 @@
-/*Añade tailwind a tu proyecto
+/*
 Crea un componente que se le pase como prop un valor en grados centigrados
-y muestre por patanlla ese valor en fahrenheit y centigrados.
+Y muestre por pantalla ese valor en grados Farenheit y centigrados
 */
 interface Props {
-    gradosC: number;
+    grados : number
 }
 
-function MiComponente({ gradosC = 30 }: Props) {
-    const toFahrenheit = (celsius: number) => celsius * 9 / 5 + 32
-    return <div>º{gradosC}/º{toFahrenheit(gradosC)}</div>
+function Conversor({grados = 30} : Props) {
+
+    const toFarenheit = (grados : number) => grados * 9/5 + 32
+    
+
+    return <div>º{grados} / º{toFarenheit(grados)}</div>
 }
 
-export default function Ejer01() {
-    return <MiComponente gradosC={25} />;
+
+export default function Ejercicio_01() {
+    return <Conversor grados={32}></Conversor>
 }

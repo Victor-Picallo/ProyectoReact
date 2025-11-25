@@ -1,9 +1,12 @@
-import { useState } from "react"
+import { useState } from "react";
 
-export default function Ejem07(){
-    const [num, setNum] = useState(0)
+export default function Ejem07() {
+  //let numerito = 56
+  const [numerito, setNumerito] = useState(100);
 
-    const handleClick = () => {setNum(num + 1)}
+  function handleClick() {
+    setNumerito(numerito+1);
+  }
 
-    return<div onClick={handleClick}>{num}</div>
+  return <div onClick={handleClick}>{numerito}</div>;
 }

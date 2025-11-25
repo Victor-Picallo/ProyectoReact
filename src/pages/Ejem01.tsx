@@ -1,5 +1,9 @@
-//ASI SE EXPORTA DIRECTAMENTE EL COMPONENTE **EXPORT DEFAULT**
-export default function Ejem01() {
-    //Componente con funciones
+
+
+function Ejem_01() {
+    
+
     return <div>Soy un componente creado con una funcion</div>
 }
+
+export default Ejem_01
