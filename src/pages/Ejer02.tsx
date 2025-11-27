@@ -9,13 +9,13 @@ El card tiene que mostrar:
 */
 
 import Card from "../components/Card";
-import RegaloIcon from "../components/icons/RegaloIcon";
+import CalabazaIcon from "../components/icons/Calabaza";
 
 
 
 
 export default function Ejercicio_02() {
-    return <Card Icon={RegaloIcon} title="Need a help in Claim?" url="https://www.google.es" urlText="See our guideline"> 
+    return <Card Icon={CalabazaIcon} title="Need a help in Claim?" url="https://www.google.es" urlText="See our guideline"> 
     Go to this step by step guideline process on how to certify for your weekly benefits:
     </Card>
 }

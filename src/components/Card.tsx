@@ -1,5 +1,5 @@
 import type { JSX } from "react";
-import CorazonIcono from "./icons/CorazonIcon";
+import GiftIcon from "./icons/GiftIcon";
 
 interface Props {
     Icon ?: () => JSX.Element
@@ -9,7 +9,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-export default function Card({ Icon = CorazonIcono, title, url, urlText, children }: Props) {
+export default function Card({ Icon = GiftIcon, title, url, urlText, children }: Props) {
   return (
     <div className="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-2xl shadow-xs">
       <div className="flex justify-between">
