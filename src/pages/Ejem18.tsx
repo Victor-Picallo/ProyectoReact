@@ -11,8 +11,6 @@ export default function Ejem18() {
     )
 
     function handleChange(event: ChangeEvent<HTMLInputElement>) {
-        /*         const value = event.target.value
-                const name = event.target.name */
         const {value, name} = event.target
         setForm({...form, [name]: value})
     }

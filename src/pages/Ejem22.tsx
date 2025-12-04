@@ -12,9 +12,9 @@ export default function Ejem22(){
     const [nameFilter, setNameFilter] = useState<string[]>(names)
 
 
-    useEffect (() => {
+   /*  useEffect (() => {
         setSearchParam(qFromUrl)
-    },[qFromUrl])
+    },[qFromUrl]) */
 
     function handleSubmit(e: FormEvent<HTMLFormElement>){
         e.preventDefault()
